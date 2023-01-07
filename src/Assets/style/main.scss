@@ -1,0 +1,66 @@
+body {
+  padding: 5vh 0;
+  background-color: gray;
+}
+
+.road {
+  width: 100%;
+  height: 90vh;
+  background-repeat: repeat-x;
+  background-size: contain;
+  position: relative;
+}
+
+.Active {
+  animation: road-animation 5s linear infinite;
+
+}
+
+@keyframes road-animation {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: -100% 0%;
+  }
+}
+
+.bird {
+  width: 150px;
+  height: 150px;
+  background-image: url('../images/bird.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%);
+  transition-property: 'transform';
+  transition-duration: '0.1s';
+  transition-timing-function: 'ease-in-out';
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+// .bird-fly {
+//   animation: Bird-fly 5s;
+// }
+
+
+// @keyframes Bird-fly {
+//   0% {
+//     transform: rotate(-45deg);
+//     // rotate(-45deg)
+//   }
+
+//   10% {
+//     transform: translateY(-100px);
+//   }
+
+//   100% {
+//     transform: translateY(300px);
+//     //  rotate(45deg)
+//   }
+// }
